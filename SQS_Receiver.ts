@@ -1,10 +1,10 @@
 import { SQSClient, ReceiveMessageCommand } from "@aws-sdk/client-sqs";
 
-const sqs = new SQSClient({ region: "us-east-2" });
+const sqs = new SQSClient({ region: "us-west-1" });
 
 export const handler = async (event) => {
     try {
-        const queueUrl = "https://sqs.us-east-2.amazonaws.com/873996336316/david-net1500-bigmover";
+        const queueUrl = "https://sqs.us-west-1.amazonaws.com/873996336316/Mammo_BigMover";
 
         const params = {
             QueueUrl: queueUrl,
